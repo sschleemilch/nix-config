@@ -54,6 +54,8 @@
     wget
   ];
 
+  security.pam.services.hyprlock = { };
+
   services = {
     openssh.enable = true;
     tlp = {
@@ -64,6 +66,12 @@
       };
     };
   };
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {
+      fonts = [ "FiraCode" "JetBrainsMono" ];
+    })
+  ];
 
   system.stateVersion = "23.11";
 }

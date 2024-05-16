@@ -6,11 +6,8 @@
 , ...
 }: {
   imports = [
-    ../../home/zsh.nix
-    ../../home/bat.nix
-    ../../home/fzf.nix
-    ../../home/jq.nix
-    ../../home/direnv.nix
+    ../../home/cli
+    ../../home/desktop
   ];
 
   nixpkgs = {
