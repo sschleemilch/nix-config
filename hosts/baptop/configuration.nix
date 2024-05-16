@@ -52,9 +52,16 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
+    firefox
+    grimblast
+    hyprpicker
+    brightnessctl
   ];
 
-  security.pam.services.hyprlock = { };
+  security = {
+    pam.services.hyprlock = { };
+    rtkit.enable = true;
+  };
 
   services = {
     openssh.enable = true;
@@ -64,6 +71,15 @@
         START_CHARGE_THRESH_BAT0 = 40;
         STOP_CHARGE_THRESH_BAT0 = 85;
       };
+    };
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this
+      #jack.enable = true;
+      wireplumber.enable = true;
     };
   };
 

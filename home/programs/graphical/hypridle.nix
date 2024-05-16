@@ -1,5 +1,5 @@
 {
-  programs.tofi = {
+  services.hypridle = {
     enable = true;
   };
 }

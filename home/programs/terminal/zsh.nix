@@ -6,9 +6,10 @@
       enable = true;
       plugins = [
         { name = "zsh-users/zsh-autosuggestions"; }
+        { name = "mafredri/zsh-async"; }
         {
-          name = "romkatv/powerlevel10k";
-          tags = [ as:theme depth:1 ];
+          name = "sindresorhus/pure";
+          tags = [ as:theme depth:1 use:pure.zsh ];
         }
         { name = "zdharma-continuum/fast-syntax-highlighting"; }
         { name = "peterhurford/up.zsh"; }

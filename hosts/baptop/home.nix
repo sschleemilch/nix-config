@@ -6,8 +6,8 @@
 , ...
 }: {
   imports = [
-    ../../home/cli
-    ../../home/desktop
+    ../../home/programs/terminal
+    ../../home/programs/graphical
   ];
 
   nixpkgs = {
