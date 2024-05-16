@@ -1,10 +1,9 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, outputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   # You can import other home-manager modules here
   imports = [
@@ -17,6 +16,9 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     ./zsh.nix
+    ./bat.nix
+    ./fzf.nix
+    ./direnv.nix
   ];
 
   nixpkgs = {
