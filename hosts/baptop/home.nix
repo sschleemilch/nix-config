@@ -5,18 +5,12 @@
 , pkgs
 , ...
 }: {
-  # You can import other home-manager modules here
   imports = [
-    # If you want to use modules your own flake exports (from modules/home-manager):
-    # outputs.homeManagerModules.example
-
-    # Or modules exported from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModules.default
-
-    ./zsh.nix
-    ./bat.nix
-    ./fzf.nix
-    ./direnv.nix
+    ../../home/zsh.nix
+    ../../home/bat.nix
+    ../../home/fzf.nix
+    ../../home/jq.nix
+    ../../home/direnv.nix
   ];
 
   nixpkgs = {
@@ -36,23 +30,18 @@
       #   });
       # })
     ];
-    # Configure your nixpkgs instance
-    config = {
-      # Disable if you don't want unfree packages
-      allowUnfree = true;
-    };
   };
 
   home = {
     username = "basti";
     homeDirectory = "/home/basti";
+    stateVersion = "23.11";
   };
 
   home.packages = with pkgs; [
     python3
   ];
 
-  # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git = {
     enable = true;
@@ -60,8 +49,5 @@
     userEmail = "sebastian.schleemilch@posteo.net";
   };
 
-  # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
-
-  home.stateVersion = "23.11";
 }
