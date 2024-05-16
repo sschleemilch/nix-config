@@ -28,8 +28,8 @@
         gaps_in = 3;
         gaps_out = 5;
         border_size = 0;
-        col.active_border = "0xff$blueAlpha 0 xff$mauveAlpha 45 deg";
-        col.inactive_border = "0xff$surface1Alpha";
+        "col.active_border" = "0xffblueAlpha 0xff$mauveAlpha 45deg";
+        "col.inactive_border" = "0xff$surface1Alpha";
         layout = "dwindle";
       };
 
@@ -47,7 +47,7 @@
         drop_shadow = "no";
         shadow_range = 4;
         shadow_render_power = 3;
-        col.shadow = "rgba(1a1a1aee)";
+        "col.shadow" = "rgba(1a1a1aee)";
       };
 
       animations = {
@@ -129,17 +129,21 @@
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
+      ];
+      bindm = [
         # Move/resize windows with mainMod + LMB/RMB and dragging
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
-
-        # FN Keys
-        "XF86MonBrightnessUp, exec, brightnessctl set 5%+"
-        "XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-        "XF86AudioRaiseVolume,  exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-        "XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        "XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        "XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+      ];
+      binde = [
+        ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+        ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+        ",XF86AudioRaiseVolume,  exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ];
+      bindl = [
+        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
       ];
     };
   };
