@@ -8,7 +8,7 @@
       exec-once = [
         "swaync"
       ];
-      monitor = "monitor=eDP-1,1920x1200@60,0x0,1";
+      monitor = "eDP-1,1920x1200@60,0x0,1";
       misc = {
         disable_hyprland_logo = "yes";
       };
