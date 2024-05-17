@@ -1,7 +1,7 @@
 {
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
+    enableCompletion = false;
     antidote = {
       enable = true;
       plugins = [
