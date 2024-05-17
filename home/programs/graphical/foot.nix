@@ -3,7 +3,8 @@
     enable = true;
     settings = {
       main = {
-        font = "FiraCode Nerd Font";
+        font = "JetBrainsMono Nerd Font:size=12";
+        pad =  "5x5";
       };
       colors = {
         foreground = "cad3f5";
