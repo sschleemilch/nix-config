@@ -35,10 +35,6 @@
     stateVersion = "23.11";
   };
 
-  home.packages = with pkgs; [
-    python3
-  ];
-
   programs.home-manager.enable = true;
   programs.git = {
     enable = true;

@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   imports = [
     ./bat.nix
     ./btop.nix
@@ -14,5 +14,7 @@
     ./tmux.nix
     ./zoxide.nix
     ./zsh.nix
+    ./htop.nix
+    ./packages.nix
   ];
 }
