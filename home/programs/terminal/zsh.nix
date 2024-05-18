@@ -7,7 +7,6 @@
       plugins = [
         "mattmc3/zephyr path:plugins/completion"
         "sindresorhus/pure"
-        # "romkatv/powerlevel10k kind:fpath"
         "https://github.com/peterhurford/up.zsh"
         "romkatv/zsh-bench kind:path"
         "ohmyzsh/ohmyzsh path:lib/clipboard.zsh"
@@ -24,5 +23,8 @@
     };
     defaultKeymap = "viins";
     history.size = 10000;
+    sessionVariables = {
+      NIX_CONFIG = "experimental-features = nix-command flakes";
+    };
   };
 }
