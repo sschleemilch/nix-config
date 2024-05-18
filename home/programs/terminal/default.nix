@@ -4,17 +4,33 @@
     ./btop.nix
     ./direnv.nix
     ./eza.nix
-    ./fd.nix
     ./fzf.nix
     ./go.nix
-    ./jq.nix
     ./k9s.nix
     ./lazygit.nix
-    ./ripgrep.nix
     ./tmux.nix
     ./zoxide.nix
     ./zsh.nix
     ./htop.nix
-    ./packages.nix
+  ];
+  home.packages = with pkgs; [
+    comma # Install and run programs by sticking a , before them
+    bc # Calculator
+    ncdu # TUI disk usage
+    neofetch
+    fd # better find
+    ripgrep #  better grep
+    httpie # better curl
+    diffsitter # better diff
+    jq
+    zip
+    p7zip
+    wget
+    tcpdump
+    nmap
+    iftop
+    tree
+    python3
+    curl
   ];
 }
