@@ -13,11 +13,9 @@
     target = ".config/waybar/config.jsonc";
     source = ./config.jsonc;
   };
-  home.file.".config/waybar/macchiato.css" = {
-    target = ".config/waybar/macchiato.css";
-    source = ./macchiato.css;
-  };
   programs.waybar = {
     enable = true;
+    catppuccin.enable = true;
+    catppuccin.mode = "createLink";
   };
 }
