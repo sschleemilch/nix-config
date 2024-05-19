@@ -53,10 +53,6 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
-    firefox
-    grimblast
-    hyprpicker
-    brightnessctl
   ];
 
   security = {

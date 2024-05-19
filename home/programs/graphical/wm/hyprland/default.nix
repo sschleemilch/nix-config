@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   imports = [
     ./tofi.nix
     ./swaync.nix
@@ -6,7 +6,10 @@
     ./hyprland.nix
     ./hypridle.nix
     ./hyprlock.nix
-    ./alacritty.nix
-    ./foot.nix
+  ];
+  home.packages = with pkgs; [
+    grimblast
+    hyprpicker
+    brightnessctl
   ];
 }

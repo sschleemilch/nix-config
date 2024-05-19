@@ -20,17 +20,36 @@
     neofetch
     fd # better find
     ripgrep #  better grep
-    httpie # better curl
     diffsitter # better diff
-    jq
+    jq # json processor
+    yq-go # yaml processor
+
     zip
     p7zip
-    wget
+
+    tree
+    python3
+
+    # networking
+    httpie # better curl
+    curl
     tcpdump
     nmap
     iftop
-    tree
-    python3
-    curl
+    iperf3
+    dnsutils
+    socat
+    ipcalc
+
+    iotop
+
+    # syscall monitoring
+    strace # syscalls
+    ltrace # library calls
+    lsof # list open files
+
+    glow # markdown perviewer
+
+    lm_sensors
   ];
 }

@@ -7,7 +7,8 @@
 }: {
   imports = [
     ../../home/programs/terminal
-    ../../home/programs/graphical
+    ../../home/programs/graphical/common
+    ../../home/programs/graphical/wm/hyprland
   ];
 
   nixpkgs = {
