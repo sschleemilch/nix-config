@@ -1,7 +1,6 @@
 {
   programs.tofi = {
     enable = true;
-    catppuccin.enable = true;
     settings = {
       font = "FiraCode Nerd Font";
       # Point size of text.

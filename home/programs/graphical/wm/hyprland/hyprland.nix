@@ -1,7 +1,6 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    catppuccin.enable = true;
     settings = {
       exec-once = [
         "swaync"
