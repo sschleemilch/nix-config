@@ -36,8 +36,87 @@
           "hyprland/workspaces"
         ];
         modules-right = [
-
+          "wireplumber"
+          "backlight"
+          "bluetooth"
+          "battery"
+          "network"
+          "custom/separator#line"
+          "clock"
         ];
+        clock = {
+          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          format = "{:%H:%M, %a %d}";
+          format-alt = "{:%Y-%m-%d}";
+        };
+        "custom/separator#line" = {
+          format = "|";
+          interval = "once";
+          tooltip = false;
+        };
+        network = {
+          interface = "wlp1s0";
+          format = "{ifname}";
+          format-wifi = "{icon}";
+          format-ethernet = "󰌘";
+          format-disconnected = "󰌙";
+          tooltip-format = "{ifname} via {gwaddr} 󰊗";
+          tooltip-format-wifi = "{icon} {essid} ({signalStrength}%)";
+          tooltip-format-ethernet = "{ifname} ";
+          tooltip-format-disconnected = "Disconnected";
+          format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+          max-length = 50;
+          on-click = "alacritty --title nmtui -e nmtui";
+        };
+        battery = {
+          interval = 30;
+          states = {
+            good = 95;
+            warning = 30;
+            critical = 20;
+          };
+          format = "{icon} {capacity}%";
+          format-charging = " {capacity}%";
+          format-plugged = " {capacity}%";
+          format-alt = "{time} {icon}";
+          format-icons = [
+            "󰂎"
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
+        };
+        bluetooth = {
+          format = "";
+          format-disabled = "󰂳";
+          format-connected = "󰂱 {num_connections}";
+          tooltip-format = " {device_alias}";
+          tooltip-format-connected = "{device_enumerate}";
+          tooltip-format-enumerate-connected = " {device_alias} 󰂄{device_battery_percentage}%";
+          tooltip = true;
+          on-click = "blueman-manager";
+        };
+        backlight = {
+          device = "amdgpu_bl1";
+          format = "{icon}{percent}%";
+          format-icons = [ " " " " " " "󰃝 " "󰃞 " "󰃟 " "󰃠 " ];
+          on-scroll-up = "brightnessctl set 1%+";
+          on-scroll-down = "brightnessctl set 1%-";
+          tooltip = false;
+        };
+        wireplumber = {
+          format = "{icon} {volume}%";
+          format-muted = "";
+          on-click = "helvum";
+          format-icons = [ "" "" "󰕾" "" ];
+        };
         "custom/oslogo" = {
           format = "";
           interval = "once";
