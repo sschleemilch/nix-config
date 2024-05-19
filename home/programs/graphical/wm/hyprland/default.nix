@@ -2,7 +2,7 @@
   imports = [
     ./tofi.nix
     ./swaync.nix
-    ./waybar.nix
+    ./waybar
     ./hyprland.nix
     ./hypridle.nix
     ./hyprlock
