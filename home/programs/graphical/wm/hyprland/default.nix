@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   imports = [
     ./tofi.nix
     ./swaync.nix
@@ -14,4 +14,14 @@
     helvum
     swaybg
   ];
+  gtk = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavour = "macchiato";
+      accent = "blue";
+      size = "standard";
+      tweaks = [ "normal" ];
+    };
+  };
 }
