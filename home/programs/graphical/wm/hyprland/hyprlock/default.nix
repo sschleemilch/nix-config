@@ -4,11 +4,11 @@
   };
   home.file = {
     "hyprlock-macchiato" = {
-      source = "./macchiato.conf";
+      source = ./macchiato.conf;
       target = ".config/hypr/macchiato.conf";
     };
     "hyprlock-config" = {
-      source = "./hyprlock.conf";
+      source = ./hyprlock.conf;
       target = ".config/hypr/hyprlock.conf";
     };
   };
