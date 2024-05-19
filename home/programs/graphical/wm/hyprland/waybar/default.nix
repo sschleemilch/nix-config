@@ -40,10 +40,26 @@
           "backlight"
           "bluetooth"
           "battery"
-          "network"
+          "network#speed"
           "custom/separator#line"
+          "custom/reboot"
+          "custom/poweroff"
           "clock"
         ];
+        "custom/poweroff" = {
+          format = "{}";
+          exec = "echo ; echo  Shutdown";
+          interval = 86400; # once every day
+          tooltip = true;
+          on-click = "systemctl poweroff";
+        };
+        "custom/reboot" = {
+          format = "";
+          exec = "echo ; echo  Reboot";
+          interval = 86400; # once every day
+          tooltip = true;
+          on-click = "systemctl reboot";
+        };
         clock = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format = "{:%H:%M, %a %d}";
@@ -67,6 +83,20 @@
           format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
           max-length = 50;
           on-click = "alacritty --title nmtui -e nmtui";
+        };
+        "network#speed" = {
+          interval = 2;
+          format = "{ifname}";
+          format-wifi = " {bandwidthUpBytes}  {bandwidthDownBytes}";
+          format-ethernet = " {bandwidthDownBytes}";
+          format-disconnected = "󰌙";
+          tooltip-format = "{ipaddr}";
+          format-linked = "󰈁 {ifname} (No IP)";
+          tooltip-format-wifi = "{essid} {icon} {signalStrength}%";
+          tooltip-format-ethernet = "{ifname} ";
+          tooltip-format-disconnected = "󰌙 Disconnected";
+          max-length = 50;
+          format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
         };
         battery = {
           interval = 30;
