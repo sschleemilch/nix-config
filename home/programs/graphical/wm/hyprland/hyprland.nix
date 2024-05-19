@@ -7,6 +7,7 @@
       "$surface1Alpha" = "494d64";
       exec-once = [
         "swaync"
+        "swaybg --image ~/.config/background"
       ];
       monitor = "eDP-1,1920x1200@60,0x0,1";
       misc = {

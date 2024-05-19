@@ -5,7 +5,7 @@
     ./waybar.nix
     ./hyprland.nix
     ./hypridle.nix
-    ./hyprlock.nix
+    ./hyprlock
     ./waybar
   ];
   home.packages = with pkgs; [
@@ -13,5 +13,6 @@
     hyprpicker
     brightnessctl
     helvum
+    swaybg
   ];
 }
