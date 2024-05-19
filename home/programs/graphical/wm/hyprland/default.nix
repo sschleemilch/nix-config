@@ -15,14 +15,4 @@
     helvum
     swaybg
   ];
-  gtk = {
-    enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "macchiato";
-      accent = "blue";
-      size = "standard";
-      tweaks = [ "normal" ];
-    };
-  };
 }

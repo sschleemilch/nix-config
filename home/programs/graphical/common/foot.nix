@@ -7,5 +7,6 @@
         pad = "5x5";
       };
     };
+    catppuccin.enable = true;
   };
 }

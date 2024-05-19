@@ -46,14 +46,11 @@
       # These are usually stuff you would upstream into home-manager
       homeManagerModules = import ./modules/home-manager;
 
-      catppuccin.flavour = "macchiato";
-
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations.baptop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         modules = [
-            catppuccin.homeManagerModules.catppuccin
           ./hosts/baptop/configuration.nix
         ];
       };

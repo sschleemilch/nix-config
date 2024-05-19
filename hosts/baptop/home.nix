@@ -10,6 +10,7 @@
     ../../home/programs/graphical/common
     ../../home/programs/graphical/wm/hyprland
     ../../home/programs/common.nix
+    inputs.catppuccin.homeManagerModules.catppuccin
   ];
 
   nixpkgs = {
