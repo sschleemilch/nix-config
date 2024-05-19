@@ -1,0 +1,199 @@
+@import "macchiato.css";
+
+* {
+    font-family: "FiraCode Nerd Font";
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: @base;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+tooltip {
+  background: @base;
+  border: 1px solid @surface1;
+}
+
+tooltip label {
+  color: white;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+/* ALL MODULES */
+#cpu,
+#temperature,
+#memory,
+#disk,
+#custom-updates,
+#systemd-failed-units,
+#wireplumber,
+#backlight,
+#bluetooth,
+#battery,
+#network,
+#custom-lock,
+#custom-poweroff,
+#custom-logout,
+#custom-reboot,
+#custom-fan,
+#custom-weather,
+#custom-separator {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: @surface2;
+    background: @surface0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+/* BORDERED MODULES ON THE LEFT */
+#cpu,
+#systemd-failed-units,
+#custom-updates,
+#custom-weather,
+#wireplumber {
+    padding-left: 1em;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+/* BORDERED MODULES ON THE RIGHT */
+#disk,
+#custom-fan,
+#custom-updates,
+#custom-weather,
+#systemd-failed-units,
+#custom-poweroff {
+    padding-right: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+#workspaces {
+    padding: 0;
+}
+
+#custom-archlogo {
+  font-size: 1.75em;
+  padding-right: 0.75em;
+  padding-left: 0.5em;
+  color: @blue;
+}
+
+/* LEFT */
+#cpu {
+    color: @subtext0;
+}
+#temperature {
+    color: @peach;
+}
+#temperature.critical {
+    color: @surface0;
+    background: @red;
+}
+#memory {
+    color: @pink;
+}
+#disk {
+    color: @sapphire;
+}
+#custom-updates {
+    color: @yellow;
+    margin-left: 1em;
+}
+#custom-updates.ok {
+    color: @green;
+}
+#custom-fan.on {
+    color: @peach;
+}
+#custom-fan.off {
+    color: @subtext0;
+}
+#custom-weather {
+    color: @blue;
+    margin-left: 1em;
+}
+#systemd-failed-units.degraded {
+    color: @red;
+}
+#systemd-failed-units {
+    margin-left: 1em;
+}
+
+
+/* MIDDLE */
+#workspaces button {
+    color: @overlay0;
+    box-shadow: inset 0 -3px transparent;
+    transition: all 0.25s cubic-bezier(.55,-0.68,.48,1.68);
+}
+#workspaces button.focused {
+    background-color: transparent;
+}
+#workspace button.hover {
+    background-color: transparent;
+}
+#workspaces button.active {
+    color: @blue;
+}
+
+/* RIGHT */
+#backlight {
+    color: @rosewater;
+}
+#wireplumber {
+    color: @mauve;
+}
+#battery {
+    color: @text;
+}
+#clock {
+    color: @subtext0;
+    padding-right: 20px;
+    padding-left: 15px;
+}
+#network {
+    color: @teal;
+}
+#bluetooth {
+    color: @blue;
+}
+#custom-reboot {
+    color: @peach;
+}
+#custom-logout {
+    color: @yellow;
+}
+#custom-lock {
+    color: @mauve;
+}
+#custom-poweroff {
+    color: @maroon;
+    padding-right: 1.5rem;
+}
+#battery.warning:not(.charging) {
+    color: @surface0;
+    background-color: @yellow;
+}
+#battery.critical:not(.charging) {
+    color: @surface0;
+    background-color: @red;
+}
+#battery.discharging {
+    color: @yellow;
+}
+#battery.charging,
+#battery.full,
+#battery.plugged {
+    color: @green;
+}
