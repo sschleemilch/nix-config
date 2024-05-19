@@ -9,6 +9,7 @@
     ../../home/programs/terminal
     ../../home/programs/graphical/common
     ../../home/programs/graphical/wm/hyprland
+    ../../home/programs/common.nix
   ];
 
   nixpkgs = {

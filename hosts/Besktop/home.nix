@@ -7,6 +7,7 @@
 }: {
   imports = [
     ../../home/programs/terminal
+    ../../home/programs/common.nix
   ];
 
   nixpkgs = {
