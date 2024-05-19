@@ -53,8 +53,8 @@
       nixosConfigurations.baptop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         modules = [
+            catppuccin.homeManagerModules.catppuccin
           ./hosts/baptop/configuration.nix
-          catppuccin.homeManagerModules.catppuccin
         ];
       };
 
@@ -62,16 +62,16 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
+            catppuccin.homeManagerModules.catppuccin
           ./hosts/baptop/home.nix
-          catppuccin.homeManagerModules.catppuccin
         ];
       };
       homeConfigurations."basti@Besktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
+            catppuccin.homeManagerModules.catppuccin
           ./hosts/Besktop/home.nix
-          catppuccin.homeManagerModules.catppuccin
         ];
       };
     };
