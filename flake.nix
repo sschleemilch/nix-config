@@ -1,11 +1,9 @@
 {
-  description = "Your new nix config";
+  description = "SchleeNix";
 
   inputs = {
-    # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    # Home manager
+    catppuccin.url = "github:catppuccin/nix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -14,6 +12,7 @@
     { self
     , nixpkgs
     , home-manager
+    , catppuccin
     , ...
     } @ inputs:
     let
@@ -47,13 +46,15 @@
       # These are usually stuff you would upstream into home-manager
       homeManagerModules = import ./modules/home-manager;
 
+      catppuccin.flavour = "macchiato";
+
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations.baptop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         modules = [
-          # > Our main nixos configuration file <
           ./hosts/baptop/configuration.nix
+          catppuccin.homeManagerModules.catppuccin
         ];
       };
 
@@ -61,16 +62,16 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
-          # > Our main home-manager configuration file <
           ./hosts/baptop/home.nix
+          catppuccin.homeManagerModules.catppuccin
         ];
       };
       homeConfigurations."basti@Besktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
-          # > Our main home-manager configuration file <
           ./hosts/Besktop/home.nix
+          catppuccin.homeManagerModules.catppuccin
         ];
       };
     };

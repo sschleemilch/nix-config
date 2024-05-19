@@ -1,10 +1,8 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    catppuccin.enable = true;
     settings = {
-      "$blueAlpha" = "8aadf4";
-      "$mauveAlpha" = "c6a0f6";
-      "$surface1Alpha" = "494d64";
       exec-once = [
         "swaync"
         "swaybg --image ~/.config/background"
