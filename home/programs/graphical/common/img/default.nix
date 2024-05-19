@@ -2,11 +2,11 @@
   home.file = {
     face = {
       source = ./face.png;
-      target = ".config/face";
+      target = ".config/face.png";
     };
     background = {
       source = ./background.png;
-      target = ".config/background";
+      target = ".config/background.png";
     };
   };
 }
