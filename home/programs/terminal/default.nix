@@ -13,6 +13,7 @@
     ./zsh.nix
     ./htop.nix
     ./nvim
+    ./skim.nix
   ];
   home.packages = with pkgs; [
     comma # Install and run programs by sticking a , before them
@@ -27,6 +28,7 @@
 
     zip
     p7zip
+    unzip
 
     tree
     python3
