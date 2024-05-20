@@ -13,7 +13,6 @@
     ./zsh.nix
     ./htop.nix
     ./nvim
-    ./skim.nix
   ];
   home.packages = with pkgs; [
     comma # Install and run programs by sticking a , before them
