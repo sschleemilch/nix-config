@@ -14,6 +14,8 @@
     catppuccin.enable = true;
     catppuccin.mode = "createLink";
     style = ./style.css;
+    systemd.enable = true;
+    systemd.target = "hyprland-session.target";
     settings = {
       mainBar = {
         layer = "top";
