@@ -46,6 +46,7 @@
       # These are usually stuff you would upstream into home-manager
       homeManagerModules = import ./modules/home-manager;
 
+
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations.ladon = nixpkgs.lib.nixosSystem {
@@ -59,7 +60,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
-            catppuccin.homeManagerModules.catppuccin
+          catppuccin.homeManagerModules.catppuccin
           ./hosts/ladon/home.nix
         ];
       };
@@ -67,7 +68,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
-            catppuccin.homeManagerModules.catppuccin
+          catppuccin.homeManagerModules.catppuccin
           ./hosts/desos/home.nix
         ];
       };
