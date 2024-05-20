@@ -17,7 +17,7 @@
   };
 
   networking = {
-    hostName = "baptop";
+    hostName = "ladon";
     networkmanager.enable = true;
   };
 

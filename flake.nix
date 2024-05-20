@@ -48,27 +48,27 @@
 
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'
-      nixosConfigurations.baptop = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.ladon = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         modules = [
-          ./hosts/baptop/configuration.nix
+          ./hosts/ladon/configuration.nix
         ];
       };
 
-      homeConfigurations."basti@baptop" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."basti@ladon" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
             catppuccin.homeManagerModules.catppuccin
-          ./hosts/baptop/home.nix
+          ./hosts/ladon/home.nix
         ];
       };
-      homeConfigurations."basti@Besktop" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."basti@desos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
             catppuccin.homeManagerModules.catppuccin
-          ./hosts/Besktop/home.nix
+          ./hosts/desos/home.nix
         ];
       };
     };
