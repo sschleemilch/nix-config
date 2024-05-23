@@ -97,7 +97,6 @@
       # Matching portion of selection text
       selection-match-color = "#00000000";
 
-
       #
       ### Text cursor theme
       #

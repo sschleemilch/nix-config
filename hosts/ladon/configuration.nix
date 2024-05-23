@@ -1,9 +1,10 @@
-{ inputs
-, outputs
-, lib
-, config
-, pkgs
-, ...
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
 }: {
   imports = [
     ./hardware-configuration.nix
@@ -33,28 +34,26 @@
   users.users = {
     basti = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" ];
+      extraGroups = ["wheel" "networkmanager"];
       shell = pkgs.zsh;
     };
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
+    extraSpecialArgs = {inherit inputs outputs;};
     users = {
       basti = import ./home.nix;
     };
   };
 
-  nix =
-    let
-      flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-    in
-    {
-      settings = {
-        # Enable flakes and new 'nix' command
-        experimental-features = "nix-command flakes";
-      };
+  nix = let
+    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+  in {
+    settings = {
+      # Enable flakes and new 'nix' command
+      experimental-features = "nix-command flakes";
     };
+  };
 
   programs = {
     zsh.enable = true;
@@ -67,7 +66,7 @@
   ];
 
   security = {
-    pam.services.hyprlock = { };
+    pam.services.hyprlock = {};
     rtkit.enable = true;
   };
 
@@ -93,7 +92,7 @@
 
   fonts.packages = with pkgs; [
     (nerdfonts.override {
-      fonts = [ "FiraCode" "JetBrainsMono" ];
+      fonts = ["FiraCode" "JetBrainsMono"];
     })
   ];
 

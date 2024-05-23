@@ -1,8 +1,10 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     neovim
     ripgrep
     fd
+    nodejs_22
+    gnumake
   ];
   home.file = {
     "neovim-configs" = {

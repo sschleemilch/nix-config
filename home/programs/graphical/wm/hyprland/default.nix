@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... }: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./tofi.nix
     ./swaync.nix
@@ -21,7 +25,7 @@
       flavour = "macchiato";
       accent = "blue";
       size = "standard";
-      tweaks = [ "normal" ];
+      tweaks = ["normal"];
     };
   };
 }

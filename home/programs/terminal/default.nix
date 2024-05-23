@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   imports = [
     ./bat.nix
     ./btop.nix
@@ -53,5 +53,8 @@
     glow # markdown perviewer
 
     lm_sensors
+
+    # buildings
+    gnumake
   ];
 }

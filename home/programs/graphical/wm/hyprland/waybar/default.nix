@@ -82,7 +82,7 @@
           tooltip-format-wifi = "{icon} {essid} ({signalStrength}%)";
           tooltip-format-ethernet = "{ifname} ";
           tooltip-format-disconnected = "Disconnected";
-          format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+          format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
           max-length = 50;
           on-click = "alacritty --title nmtui -e nmtui";
         };
@@ -98,7 +98,7 @@
           tooltip-format-ethernet = "{ifname} ";
           tooltip-format-disconnected = "󰌙 Disconnected";
           max-length = 50;
-          format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+          format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
         };
         battery = {
           interval = 30;
@@ -138,7 +138,7 @@
         backlight = {
           device = "amdgpu_bl1";
           format = "{icon}{percent}%";
-          format-icons = [ " " " " " " "󰃝 " "󰃞 " "󰃟 " "󰃠 " ];
+          format-icons = [" " " " " " "󰃝 " "󰃞 " "󰃟 " "󰃠 "];
           on-scroll-up = "brightnessctl set 1%+";
           on-scroll-down = "brightnessctl set 1%-";
           tooltip = false;
@@ -147,7 +147,7 @@
           format = "{icon} {volume}%";
           format-muted = "";
           on-click = "helvum";
-          format-icons = [ "" "" "󰕾" "" ];
+          format-icons = ["" "" "󰕾" ""];
         };
         "custom/oslogo" = {
           format = "";
