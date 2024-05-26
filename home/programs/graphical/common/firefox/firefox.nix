@@ -6,6 +6,7 @@
   programs.firefox = {
     enable = true;
     policies = {
+      AutofillCreditCardEnabled = false;
       DisableFirefoxStudies = true;
       DisableFormHistory = true;
       DisablePocket = true;
@@ -13,6 +14,9 @@
       DontCheckDefaultBrowser = true;
       FirefoxHome = {
         Pocket = false;
+        TopSites = false;
+        SponsoredTopSites = false;
+        Highlights = false;
         Snippets = false;
       };
       PasswordManagerEnabled = false;
@@ -35,8 +39,6 @@
         default = "Google";
         privateDefault = "DuckDuckGo";
         force = true;
-      };
-      settings = {
       };
     };
   };
