@@ -10,6 +10,7 @@
     ./hyprland.nix
     ./hypridle.nix
     ./hyprlock
+    ./cliphist.nix
   ];
   home.packages = with pkgs; [
     grimblast
