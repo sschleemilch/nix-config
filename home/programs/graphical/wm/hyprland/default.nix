@@ -17,6 +17,7 @@
     brightnessctl
     helvum
     swaybg
+    wl-clipboard
   ];
   gtk = {
     enable = true;
