@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  inputs,
   ...
 }: {
   programs.firefox = {
@@ -40,6 +41,10 @@
         privateDefault = "DuckDuckGo";
         force = true;
       };
+      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+          ublock-origin
+          bitwarden
+      ];
     };
   };
 }
