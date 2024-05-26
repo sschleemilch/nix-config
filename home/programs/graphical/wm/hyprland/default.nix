@@ -28,6 +28,14 @@
       accent = "blue";
       size = "standard";
       tweaks = ["normal"];
+      cursor = {
+        enable = true;
+        accent = "dark";
+      };
+      icon = {
+        enable = true;
+        accent = "blue";
+      };
     };
   };
 }
