@@ -28,7 +28,7 @@
         gaps_in = 3;
         gaps_out = 5;
         border_size = 2;
-        "col.active_border" = "0xffblueAlpha 0xff$mauveAlpha 45deg";
+        "col.active_border" = "0xff$overlay1Alpha";
         "col.inactive_border" = "0xff$surface1Alpha";
         layout = "dwindle";
       };
