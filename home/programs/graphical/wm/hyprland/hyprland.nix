@@ -4,9 +4,6 @@
     catppuccin.enable = true;
     systemd.enable = true;
     settings = {
-      exec-once = [
-        "swaync"
-      ];
       monitor = "eDP-1,1920x1200@60,0x0,1";
       misc = {
         disable_hyprland_logo = "yes";

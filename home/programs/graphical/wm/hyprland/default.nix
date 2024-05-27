@@ -5,13 +5,13 @@
 }: {
   imports = [
     ./tofi.nix
-    ./swaync.nix
     ./waybar
     ./hyprland.nix
     ./hypridle.nix
     ./hyprlock
     ./cliphist.nix
     ./hyprpaper.nix
+    ./mako.nix
   ];
   home.packages = with pkgs; [
     grimblast
@@ -19,6 +19,7 @@
     brightnessctl
     helvum
     wl-clipboard
+    libnotify
   ];
   gtk = {
     enable = true;
