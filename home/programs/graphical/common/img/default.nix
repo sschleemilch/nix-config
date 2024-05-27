@@ -4,9 +4,10 @@
       source = ./face.png;
       target = ".config/face.png";
     };
-    background = {
-      source = ./background.png;
-      target = ".config/background.png";
+    wallpapers = {
+      source = ./wallpapers;
+      target = ".config/wallpapers";
+      recursive = true;
     };
   };
 }

@@ -6,7 +6,7 @@
     settings = {
       exec-once = [
         "swaync"
-        "swaybg --image ~/.config/background.png"
+        "swaybg --image ~/.config/wallpapers/nix-black-4k.png"
       ];
       monitor = "eDP-1,1920x1200@60,0x0,1";
       misc = {
