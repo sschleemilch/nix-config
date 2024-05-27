@@ -78,11 +78,9 @@
         "$mainMod, Return, exec, foot"
         "$mainMod, B, exec, firefox"
         "$mainMod, E, exec, thunar"
-        "$mainMod SHIFT, n, exec, swaync-client -t -sw"
         "$mainMod, L, exec, hyprlock"
         "$mainMod, SPACE, exec, tofi-drun --drun-launch=true"
         "$mainMod, S, exec, grimblast save area"
-        "$mainMod, M, exec, killall waybar && waybar"
         # Window management
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen"
@@ -93,6 +91,15 @@
         # ░█▄█░░█░░█░█░█░█░█░█░█▄█
         # ░▀░▀░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀
         # WINDOWS FOCUS
+        "bind = ALT,h,movefocus,l"
+        "bind = ALT,l,movefocus,r"
+        "bind = ALT,k,movefocus,u"
+        "bind = ALT,j,movefocus,d"
+        # Move window
+        "bind = SUPER,left,movewindow,l"
+        "bind = SUPER,right,movewindow,r"
+        "bind = SUPER,up,movewindow,u"
+        "bind = SUPER,down,movewindow,d"
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
         "$mainMod SHIFT, 3, movetoworkspace, 3"
