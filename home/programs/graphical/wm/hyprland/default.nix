@@ -11,13 +11,13 @@
     ./hypridle.nix
     ./hyprlock
     ./cliphist.nix
+    ./hyprpaper.nix
   ];
   home.packages = with pkgs; [
     grimblast
     hyprpicker
     brightnessctl
     helvum
-    swaybg
     wl-clipboard
   ];
   gtk = {
