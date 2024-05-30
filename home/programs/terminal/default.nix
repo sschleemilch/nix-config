@@ -18,7 +18,7 @@
     comma # Install and run programs by sticking a , before them
     bc # Calculator
     ncdu # TUI disk usage
-    neofetch
+    fastfetch
     fd # better find
     ripgrep #  better grep
     diffsitter # better diff
@@ -56,5 +56,7 @@
 
     # buildings
     gnumake
+
+    cyme # better lsusb
   ];
 }
