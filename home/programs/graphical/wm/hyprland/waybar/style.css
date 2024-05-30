@@ -9,6 +9,8 @@ window#waybar {
     background-color: transparent;
     transition-property: background-color;
     transition-duration: 0.5s;
+    border: 2px solid @surface1;
+    border-radius: 10;
 }
 
 window#waybar.hidden {
@@ -64,8 +66,8 @@ label:focus {
 #custom-weather,
 #wireplumber {
     padding-left: 1em;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 10;
+    border-bottom-left-radius: 10;
     border-left: 1px solid @surface1;
 }
 
@@ -76,8 +78,8 @@ label:focus {
 #systemd-failed-units,
 #custom-poweroff {
     padding-right: 1rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 10;
+    border-bottom-right-radius: 10;
     border-right: 1px solid @surface1;
 }
 

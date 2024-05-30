@@ -20,8 +20,9 @@
       mainBar = {
         layer = "top";
         height = 50;
-        margin-top = 0;
-        margin-left = 0;
+        margin-top = 5;
+        margin-left = 5;
+        margin-right = 5;
         margin-bottom = 0;
         spacing = 0;
         modules-left = [
