@@ -81,6 +81,9 @@
       #jack.enable = true;
       wireplumber.enable = true;
     };
+    fprintd = {
+      enable = true;
+    };
   };
 
   fonts.packages = with pkgs; [
