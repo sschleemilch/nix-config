@@ -42,7 +42,7 @@
           "backlight"
           "bluetooth"
           "battery"
-          "network#speed"
+          "network"
           "custom/separator#line"
           "custom/reboot"
           "custom/poweroff"
