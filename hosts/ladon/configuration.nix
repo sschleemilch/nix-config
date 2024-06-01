@@ -1,10 +1,9 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, outputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   imports = [
     ./hardware-configuration.nix
@@ -34,13 +33,13 @@
   users.users = {
     basti = {
       isNormalUser = true;
-      extraGroups = ["wheel" "networkmanager"];
+      extraGroups = [ "wheel" "networkmanager" ];
       shell = pkgs.zsh;
     };
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = { inherit inputs outputs; };
     users = {
       basti = import ./home.nix;
     };
@@ -59,7 +58,7 @@
   ];
 
   security = {
-    pam.services.hyprlock = {};
+    pam.services.hyprlock = { };
     rtkit.enable = true;
   };
 
@@ -85,7 +84,7 @@
 
   fonts.packages = with pkgs; [
     (nerdfonts.override {
-      fonts = ["FiraCode" "JetBrainsMono" "Monaspace"];
+      fonts = [ "FiraCode" "JetBrainsMono" "Monaspace" ];
     })
   ];
 

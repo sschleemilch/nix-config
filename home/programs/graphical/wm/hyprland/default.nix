@@ -1,7 +1,6 @@
-{
-  pkgs,
-  inputs,
-  ...
+{ pkgs
+, inputs
+, ...
 }: {
   imports = [
     ./tofi.nix
@@ -28,7 +27,7 @@
       flavour = "macchiato";
       accent = "blue";
       size = "standard";
-      tweaks = ["normal"];
+      tweaks = [ "normal" ];
       cursor = {
         enable = true;
         accent = "dark";

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   imports = [
     ./bat.nix
     ./btop.nix
@@ -30,8 +30,9 @@
     p7zip
     unzip
 
-    tree
     python3
+    cargo
+    rustc
 
     # networking
     httpie # better curl
