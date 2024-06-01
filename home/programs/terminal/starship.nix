@@ -6,6 +6,10 @@
       directory = {
         read_only = " ";
       };
+      status = {
+        disabled = false;
+        symbol = " ";
+      };
     };
   };
 }
