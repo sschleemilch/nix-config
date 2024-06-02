@@ -7,6 +7,12 @@
         disabled = false;
         symbol = " ";
       };
+      direnv = {
+        disabled = false;
+        format = "[$symbol$loaded/$allowed]($style) ";
+        style = "bold peach";
+        symbol = " ";
+      };
       aws.symbol = "  ";
       c.symbol = " ";
       conda.symbol = " ";
