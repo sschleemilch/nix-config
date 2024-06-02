@@ -24,7 +24,7 @@
     enable = true;
     catppuccin = {
       enable = true;
-      flavour = "macchiato";
+      flavor = "macchiato";
       accent = "blue";
       size = "standard";
       tweaks = [ "normal" ];
