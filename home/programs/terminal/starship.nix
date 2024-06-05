@@ -3,7 +3,7 @@
     enable = true;
     catppuccin.enable = true;
     settings = {
-      format = "[-](surface2)$os$username$directory$git_branch$git_state$git_status$fill$direnv$status$jobs[](surface2)$line_break$character";
+      format = "[-](surface2)$os$username$directory$git_branch$git_state$git_status$fill$direnv$python$status$jobs$time[](surface2)$line_break$character";
       directory = {
         format = "[](fg:blue)[ $path](bold bg:blue fg:surface0)[](fg:blue)[-](surface2)";
       };
@@ -18,6 +18,15 @@
         loaded_msg = "";
         not_allowed_msg = "";
         denied_msg = "";
+      };
+      time = {
+        disabled = false;
+        format = "[](fg:rosewater)[ $time](bold bg:rosewater fg:surface0)[](fg:rosewater)[-](surface2)";
+        time_format = "%R";
+      };
+      python = {
+        format = "[](fg:yellow)[$symbol$pyenv_prefix($version )(\($virtualenv\))](bold bg:yellow fg:surface0)[](fg:yellow)[-](surface2)";
+        symbol = " ";
       };
       fill = {
         disabled = false;
