@@ -3,7 +3,7 @@
     enable = true;
     catppuccin.enable = true;
     settings = {
-      format = "[-](surface2)$os$username$directory$git_branch$git_state$git_status$fill$direnv$python$status$jobs$time[](surface2)$line_break$character";
+      format = "[-](surface2)$os$username$directory$git_branch$git_state$git_status$fill$direnv$nodejs$golang$rust$python$status$jobs$time[](surface2)$line_break$character";
       directory = {
         format = "[](fg:blue)[ $path](bold bg:blue fg:surface0)[](fg:blue)[-](surface2)";
       };
@@ -18,6 +18,18 @@
         loaded_msg = "";
         not_allowed_msg = "";
         denied_msg = "";
+      };
+      golang = {
+        format = "[](fg:sapphire)[$symbol($version)](bold bg:sapphire fg:surface0)[](fg:sapphire)[-](surface2)";
+        symbol = " ";
+      };
+      rust = {
+        format = "[](fg:mauve)[$symbol($version)](bold bg:mauve fg:surface0)[](fg:mauve)[-](surface2)";
+        symbol = " ";
+      };
+      nodejs = {
+        format = "[](fg:green)[$symbol($version)](bold bg:green fg:surface0)[](fg:green)[-](surface2)";
+        symbol = "󰎙 ";
       };
       time = {
         disabled = false;
