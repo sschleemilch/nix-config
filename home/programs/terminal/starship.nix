@@ -3,12 +3,21 @@
     enable = true;
     catppuccin.enable = true;
     settings = {
-      format = "[-](surface2)$os$username$directory$git_branch$git_state$git_status$fill$status$jobs[](surface2)$line_break$character";
+      format = "[-](surface2)$os$username$directory$git_branch$git_state$git_status$fill$direnv$status$jobs[](surface2)$line_break$character";
       directory = {
         format = "[](fg:blue)[ $path](bold bg:blue fg:surface0)[](fg:blue)[-](surface2)";
       };
       username = {
         format = "[](fg:red)[ $user](bold bg:red fg:surface0)[](fg:red)[-](surface2)";
+      };
+      direnv = {
+        disabled = false;
+        format = "[](fg:teal)[$symbol$loaded/$allowed](bold bg:teal fg:surface0)[](fg:teal)[-](surface2)";
+        symbol = " ";
+        allowed_msg = "";
+        loaded_msg = "";
+        not_allowed_msg = "";
+        denied_msg = "";
       };
       fill = {
         disabled = false;
@@ -18,12 +27,6 @@
       status = {
         disabled = false;
         format = "[](fg:red)[ $status](bold bg:red fg:surface0)[](fg:red)[-](surface2)";
-      };
-      direnv = {
-        disabled = false;
-        format = "[$symbol$loaded/$allowed]($style)[-](surface2)";
-        style = "bold peach";
-        symbol = " ";
       };
       jobs = {
         format = "[](fg:subtext1)[$symbol$number](bold bg:subtext1 fg:surface0)[](fg:subtext1)[-](surface2)";
