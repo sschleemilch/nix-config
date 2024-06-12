@@ -58,6 +58,12 @@
           ./hosts/ladon/configuration.nix
         ];
       };
+      nixosConfigurations.deimos = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs outputs; };
+        modules = [
+          ./hosts/deimos/configuration.nix
+        ];
+      };
 
       homeConfigurations."basti@ladon" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
