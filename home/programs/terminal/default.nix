@@ -58,6 +58,7 @@
 
     # buildings
     gnumake
+    gcc
 
     cyme # better lsusb
   ];
