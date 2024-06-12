@@ -3,7 +3,6 @@
 , ...
 }: {
   imports = [
-    ./tofi.nix
     ./waybar
     ./hyprland.nix
     ./hypridle.nix
@@ -11,6 +10,7 @@
     ./cliphist.nix
     ./hyprpaper.nix
     ./mako.nix
+    ./anyrun.nix
   ];
   home.packages = with pkgs; [
     grimblast
