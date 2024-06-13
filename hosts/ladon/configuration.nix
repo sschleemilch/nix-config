@@ -80,6 +80,9 @@
       #jack.enable = true;
       wireplumber.enable = true;
     };
+    getty = {
+      autologinUser = "basti";
+    };
   };
 
   fonts.packages = with pkgs; [
