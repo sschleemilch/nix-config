@@ -64,6 +64,7 @@ label:focus {
 #systemd-failed-units,
 #custom-updates,
 #custom-weather,
+#custom-fan,
 #wireplumber {
     padding-left: 1em;
     border-top-left-radius: 10;
@@ -76,6 +77,7 @@ label:focus {
 #custom-updates,
 #custom-weather,
 #systemd-failed-units,
+#disk,
 #custom-poweroff {
     padding-right: 1rem;
     border-top-right-radius: 10;
@@ -124,9 +126,13 @@ label:focus {
 #custom-fan.off {
     color: @subtext0;
 }
+#custom-fan {
+    margin-left: 1em;
+    padding-right: 1.25em;
+}
 #custom-weather {
     color: @blue;
-    margin-left: 1em;
+    margin-right: 1em;
 }
 #systemd-failed-units.degraded {
     color: @red;

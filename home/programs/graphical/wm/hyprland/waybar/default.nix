@@ -33,12 +33,12 @@
           "disk"
           "custom/fan"
           "systemd-failed-units"
-          "custom/weather"
         ];
         modules-center = [
           "hyprland/workspaces"
         ];
         modules-right = [
+          "custom/weather"
           "wireplumber"
           "backlight"
           "bluetooth"
