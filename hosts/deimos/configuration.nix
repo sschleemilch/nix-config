@@ -75,6 +75,7 @@
       wireplumber.enable = true;
     };
     xserver.videoDrivers = [ "nvidia" ];
+    udisks2.enable = true;
   };
 
   fonts.packages = with pkgs; [
