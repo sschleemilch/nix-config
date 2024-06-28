@@ -1,38 +1,20 @@
 return {
 	-- browser
 	{
-		"stevearc/oil.nvim",
-		opts = {
-			columns = {
-				"icon",
-			},
-			use_default_keymaps = false,
-			keymaps = {
-				["g?"] = "actions.show_help",
-				["<CR>"] = "actions.select",
-				["<C-p>"] = "actions.preview",
-				["<C-c>"] = "actions.close",
-				["q"] = "actions.close",
-				["-"] = "actions.parent",
-				["_"] = "actions.open_cwd",
-				["`"] = "actions.cd",
-				["~"] = "actions.tcd",
-				["gs"] = "actions.change_sort",
-				["gx"] = "actions.open_external",
-				["g."] = "actions.toggle_hidden",
-				["g\\"] = "actions.toggle_trash",
-			},
-			view_options = {
-				show_hidden = true,
-			},
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
 		},
-		keys = {
+        keys = {
 			{
 				"-",
-				"<cmd>Oil<cr>",
+				"<cmd>Neotree position=current<cr>",
 				desc = "Open parent directory",
 			},
-		},
+        }
 	},
 	-- Better `vim.notify()`
 	{
@@ -81,7 +63,6 @@ return {
 			extensions = {
 				"lazy",
 				"mason",
-				"oil",
 			},
 			options = {
 				theme = "catppuccin",
@@ -133,7 +114,9 @@ return {
 					"lazy",
 					"mason",
 					"notify",
-					"oil_preview",
+                    "neo-tree",
+                    "Trouble",
+                    "trouble"
 				},
 			},
 		},
@@ -159,7 +142,9 @@ return {
 					"mason",
 					"notify",
 					"fzf",
-					"oil_preview",
+                    "neo-tree",
+                    "Trouble",
+                    "trouble"
 				},
 				callback = function()
 					vim.b.miniindentscope_disable = true
@@ -248,7 +233,6 @@ return {
                     -- stylua: ignore
                     center = {
                         { action = require"fzf-lua".files, desc = " Find file", icon = " ", key = "f" },
-                        { action = require("oil").open, desc = " Browse files", icon = " ", key = "b" },
                         { action = require"fzf-lua".oldfiles, desc = " Recent files", icon = " ", key = "r" },
                         { action = require"fzf-lua".live_grep, desc = " Find text", icon = " ", key = "g" },
                         { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
