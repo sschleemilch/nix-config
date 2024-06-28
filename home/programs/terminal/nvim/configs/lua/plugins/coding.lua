@@ -59,50 +59,36 @@ return {
 
 	-- snippets
 	{
-		"L3MON4D3/LuaSnip",
-		build = (not jit.os:find("Windows"))
-				and "echo 'NOTE: jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
-			or nil,
+		"nvim-cmp",
 		dependencies = {
 			{
-				"rafamadriz/friendly-snippets",
-				config = function()
-					require("luasnip.loaders.from_vscode").lazy_load()
+				"garymjr/nvim-snippets",
+				opts = {
+					friendly_snippets = true,
+				},
+				dependencies = { "rafamadriz/friendly-snippets" },
+			},
+		},
+		keys = {
+			{
+				"<Tab>",
+				function()
+					return vim.snippet.active({ direction = 1 }) and "<cmd>lua vim.snippet.jump(1)<cr>" or "<Tab>"
 				end,
+				expr = true,
+				silent = true,
+				mode = { "i", "s" },
 			},
 			{
-				"nvim-cmp",
-				dependencies = {
-					"saadparwaiz1/cmp_luasnip",
-				},
-				opts = function(_, opts)
-					opts.snippet = {
-						expand = function(args)
-							require("luasnip").lsp_expand(args.body)
-						end,
-					}
-					table.insert(opts.sources, { name = "luasnip" })
+				"<S-Tab>",
+				function()
+					return vim.snippet.active({ direction = -1 }) and "<cmd>lua vim.snippet.jump(-1)<cr>" or "<S-Tab>"
 				end,
+				expr = true,
+				silent = true,
+				mode = { "i", "s" },
 			},
 		},
-		opts = {
-			history = true,
-			delete_check_events = "TextChanged",
-		},
-        -- stylua: ignore
-        keys = {
-            {
-                "<tab>",
-                function()
-                    return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<tab>"
-                end,
-                expr = true,
-                silent = true,
-                mode = "i",
-            },
-            { "<tab>",   function() require("luasnip").jump(1) end,  mode = "s" },
-            { "<s-tab>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
-        },
 	},
 
 	-- auto pairs
@@ -177,23 +163,9 @@ return {
 
 	-- comments
 	{
-		"JoosepAlviste/nvim-ts-context-commentstring",
-		lazy = true,
-		opts = {
-			enable_autocmd = false,
-		},
-	},
-	{
-		"echasnovski/mini.comment",
+		"folke/ts-comments.nvim",
 		event = "VeryLazy",
-		opts = {
-			options = {
-				custom_commentstring = function()
-					return require("ts_context_commentstring.internal").calculate_commentstring()
-						or vim.bo.commentstring
-				end,
-			},
-		},
+		opts = {},
 	},
 
 	-- Better text-objects

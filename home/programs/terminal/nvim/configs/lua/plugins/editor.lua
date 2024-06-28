@@ -4,11 +4,15 @@ return {
 		"nvim-pack/nvim-spectre",
 		build = false,
 		cmd = "Spectre",
-		opts = { open_cmd = "noswapfile vnew" },
-        -- stylua: ignore
-        keys = {
-            { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
-        },
+		keys = {
+			{
+				"<leader>sr",
+				function()
+					require("spectre").open()
+				end,
+				desc = "Replace in files (Spectre)",
+			},
+		},
 	},
 	{
 		"ibhagwan/fzf-lua",
@@ -105,12 +109,34 @@ return {
 				changedelete = { text = "▎" },
 				untracked = { text = "▎" },
 			},
+			signs_staged = {
+				add = { text = "▎" },
+				change = { text = "▎" },
+				delete = { text = "" },
+				topdelete = { text = "" },
+				changedelete = { text = "▎" },
+			},
 			on_attach = function(buffer)
 				local gs = package.loaded.gitsigns
 
 				local function map(mode, l, r, desc)
 					vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
 				end
+
+				map("n", "]h", function()
+					if vim.wo.diff then
+						vim.cmd.normal({ "]c", bang = true })
+					else
+						gs.nav_hunk("next")
+					end
+				end, "Next Hunk")
+				map("n", "[h", function()
+					if vim.wo.diff then
+						vim.cmd.normal({ "[c", bang = true })
+					else
+						gs.nav_hunk("prev")
+					end
+				end, "Prev Hunk")
 
                 -- stylua: ignore start
                 map("n", "]h", gs.next_hunk, "Next Hunk")
