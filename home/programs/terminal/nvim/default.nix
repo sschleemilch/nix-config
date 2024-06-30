@@ -6,6 +6,9 @@
     nodejs_22
     gnumake
   ];
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
   home.file = {
     "neovim-configs" = {
       source = ./configs;
