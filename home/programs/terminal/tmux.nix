@@ -5,6 +5,7 @@
     terminal = "tmux-256color";
     shell = "${pkgs.zsh}/bin/zsh";
     prefix = "C-Space";
+    mouse = true;
     catppuccin = {
       enable = true;
       extraConfig = ''
