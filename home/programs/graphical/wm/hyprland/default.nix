@@ -10,7 +10,7 @@
     ./cliphist.nix
     ./hyprpaper.nix
     ./mako.nix
-    ./anyrun.nix
+    ./tofi.nix
   ];
   home.packages = with pkgs; [
     grimblast

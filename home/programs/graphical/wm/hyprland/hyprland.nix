@@ -79,7 +79,7 @@
         "$mainMod, B, exec, firefox"
         "$mainMod, E, exec, thunar"
         "$mainMod, L, exec, hyprlock"
-        "$mainMod, SPACE, exec, anyrun"
+        "$mainMod, SPACE, exec, tofi-drun --drun-launch=true"
         "$mainMod, S, exec, grimblast save area"
         # Window management
         "$mainMod, Q, killactive,"
