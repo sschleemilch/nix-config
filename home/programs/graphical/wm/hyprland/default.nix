@@ -21,18 +21,4 @@
     wl-clipboard
     libnotify
   ];
-  gtk = {
-    enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "macchiato";
-      accent = "blue";
-      size = "standard";
-      tweaks = [ "normal" ];
-      icon = {
-        enable = true;
-        accent = "blue";
-      };
-    };
-  };
 }

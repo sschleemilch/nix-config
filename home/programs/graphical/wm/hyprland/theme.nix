@@ -7,7 +7,7 @@
   home.pointerCursor = {
     gtk.enable = true;
     package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
+    name = "Bibata-Modern-Ice";
     size = 20;
   };
   gtk = {
@@ -20,10 +20,10 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "Catppuccin-Macchiato-Compact-Blue-Dark";
+      name = "catppuccin-macchiato-blue-standard+default";
       package = pkgs.catppuccin-gtk.override {
+        size = "standard";
         accents = [ "blue" ];
-        size = "compact";
         variant = "macchiato";
       };
     };
@@ -37,5 +37,4 @@
       gtk-application-prefer-dark-theme = true;
     };
   };
-  home.sessionVariables.GTK_THEME = gtk.theme.name;
 }

@@ -5,6 +5,10 @@
     systemd.enable = true;
     settings = {
       monitor = "eDP-1,1920x1200@60,0x0,1";
+      env = [
+        "HYPRCURSOR_THEME,Bibata-Modern-Ice"
+        "HYPRCURSOR_SIZE,20"
+      ];
       misc = {
         disable_hyprland_logo = "yes";
       };
