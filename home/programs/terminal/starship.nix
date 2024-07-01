@@ -78,8 +78,8 @@
         format = "[  $state \\($progress_current/$progress_total\\)](fg:surface0 bg:peach)";
       };
       git_status = {
-        format = "[$ahead_behind $all_status](bold bg:peach fg:surface0)[](fg:peach)[─](surface2)";
-        up_to_date = " 󰓦";
+        format = "[ $ahead_behind $all_status](bold bg:peach fg:surface0)[](fg:peach)[─](surface2)";
+        up_to_date = "󰓦";
         conflicted = "󱐋 ";
         stashed = " ";
         modified = " ";
