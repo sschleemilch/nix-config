@@ -11,15 +11,17 @@ return {
 		keys = {
 			{
 				"-",
-				"<cmd>Neotree<cr>",
+				"<cmd>Neotree position=current reveal toggle<cr>",
 				desc = "Open parent directory",
 			},
 		},
 		opts = {
 			sources = { "filesystem", "buffers", "git_status" },
+			enable_diagnostics = false,
 			filesystem = {
 				bind_to_cwd = false,
 				follow_current_file = { enabled = true },
+				use_libuv_filter_watcher = true,
 			},
 			window = {
 				mappings = {
@@ -99,6 +101,7 @@ return {
 			extensions = {
 				"lazy",
 				"mason",
+				"neo-tree",
 			},
 			options = {
 				theme = "catppuccin",
