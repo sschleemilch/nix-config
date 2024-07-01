@@ -80,10 +80,10 @@
       git_status = {
         format = "[$ahead_behind $all_status](bold bg:peach fg:surface0)[](fg:peach)[─](surface2)";
         up_to_date = " 󰓦";
-        conflicted = "󱐋";
+        conflicted = "󱐋 ";
         stashed = " ";
         modified = " ";
-        staged = "󱊽";
+        staged = "󱊽 ";
         renamed = " ";
         deleted = " ";
         ahead = " ";

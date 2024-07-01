@@ -8,13 +8,49 @@ return {
 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 			"MunifTanjim/nui.nvim",
 		},
-        keys = {
+		keys = {
 			{
 				"-",
-				"<cmd>Neotree position=current<cr>",
+				"<cmd>Neotree<cr>",
 				desc = "Open parent directory",
 			},
-        }
+		},
+		opts = {
+			sources = { "filesystem", "buffers", "git_status" },
+			filesystem = {
+				bind_to_cwd = false,
+				follow_current_file = { enabled = true },
+			},
+			window = {
+				mappings = {
+					["l"] = "open",
+					["h"] = "close_node",
+					["<space>"] = "none",
+					["Y"] = {
+						function(state)
+							local node = state.tree:get_node()
+							local path = node:get_id()
+							vim.fn.setreg("+", path, "c")
+						end,
+						desc = "Copy Path to Clipboard",
+					},
+				},
+			},
+			default_component_configs = {
+				indent = {
+					with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
+					expander_collapsed = "",
+					expander_expanded = "",
+					expander_highlight = "NeoTreeExpander",
+				},
+				git_status = {
+					symbols = {
+						unstaged = "󰄱",
+						staged = "󰱒",
+					},
+				},
+			},
+		},
 	},
 	-- Better `vim.notify()`
 	{
@@ -114,9 +150,9 @@ return {
 					"lazy",
 					"mason",
 					"notify",
-                    "neo-tree",
-                    "Trouble",
-                    "trouble"
+					"neo-tree",
+					"Trouble",
+					"trouble",
 				},
 			},
 		},
@@ -142,9 +178,9 @@ return {
 					"mason",
 					"notify",
 					"fzf",
-                    "neo-tree",
-                    "Trouble",
-                    "trouble"
+					"neo-tree",
+					"Trouble",
+					"trouble",
 				},
 				callback = function()
 					vim.b.miniindentscope_disable = true
