@@ -1,16 +1,15 @@
 return {
 	-- search/replace in multiple files
 	{
-		"nvim-pack/nvim-spectre",
-		build = false,
-		cmd = "Spectre",
+		"MagicDuck/grug-far.nvim",
+		config = function()
+			require("grug-far").setup({})
+		end,
 		keys = {
 			{
 				"<leader>sr",
-				function()
-					require("spectre").open()
-				end,
-				desc = "Replace in files (Spectre)",
+				"<cmd>GrugFar<cr>",
+				desc = "Replace in files (Grug-far)",
 			},
 		},
 	},
