@@ -31,7 +31,6 @@
           "temperature#cpu"
           "memory"
           "disk"
-          "custom/fan"
           "systemd-failed-units"
         ];
         modules-center = [
@@ -74,7 +73,7 @@
           tooltip = false;
         };
         network = {
-          interface = "wlp1s0";
+          interface = "wlp0s20f3";
           format = "{ifname}";
           format-wifi = "{icon}";
           format-ethernet = "󰌘";

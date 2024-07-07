@@ -4,10 +4,23 @@
     catppuccin.enable = true;
     systemd.enable = true;
     settings = {
-      monitor = "eDP-1,1920x1200@60,0x0,1";
+      monitor = [
+        "DP-1,2560x1440@144,2560x0,1"
+        "HDMI-A-1,3840x2160@60,0x0,1.5"
+      ];
       env = [
         "HYPRCURSOR_THEME,Bibata-Modern-Ice"
         "HYPRCURSOR_SIZE,20"
+      ];
+      workspace = [
+        "1,monitor:HDMI-A-1"
+        "2,monitor:DP-1"
+        "3,monitor:DP-1"
+        "4,monitor:DP-1"
+        "5,monitor:DP-1"
+        "6,monitor:DP-1"
+        "7,monitor:DP-1"
+        "8,monitor:DP-1"
       ];
       misc = {
         disable_hyprland_logo = "yes";
