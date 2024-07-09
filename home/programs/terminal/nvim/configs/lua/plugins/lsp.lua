@@ -30,9 +30,8 @@ return {
 				"shfmt",
 				"prettier",
 				"buildifier",
-                "ruff",
-                "nixpkgs-fmt"
-				-- "flake8",
+				"ruff",
+				"nixpkgs-fmt",
 			},
 		},
 		config = function(_, opts)
@@ -72,6 +71,14 @@ return {
 					"pylsp",
 					"jsonls",
 					"yamlls",
+					"clangd",
+					"cmake",
+					"gopls",
+					"tsserver",
+					"autotools_ls",
+					"rust_analyzer",
+					"bzl",
+					"taplo",
 				},
 				handlers = {
 					lsp_zero.default_setup,
