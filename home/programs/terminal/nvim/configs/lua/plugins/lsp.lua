@@ -28,10 +28,10 @@ return {
 			ensure_installed = {
 				"stylua",
 				"shfmt",
-				"black",
 				"prettier",
-				"isort",
 				"buildifier",
+                "ruff",
+                "nixpkgs-fmt"
 				-- "flake8",
 			},
 		},

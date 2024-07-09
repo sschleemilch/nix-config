@@ -72,11 +72,11 @@ return {
 		opts = {
 			options = {
 				always_show_bufferline = false,
-				separator_style = {"", ""},
-                indicator = {
-                    style = "none"
-                },
-                show_buffer_close_icons = false,
+				separator_style = { "", "" },
+				indicator = {
+					style = "none",
+				},
+				show_buffer_close_icons = false,
 			},
 		},
 	},
@@ -266,6 +266,9 @@ return {
 		event = "VeryLazy",
 		opts = {
 			lsp = {
+				progress = {
+					enabled = false,
+				},
 				override = {
 					["vim.lsp.util.convert_input_to_markdown_lines"] = true,
 					["vim.lsp.util.stylize_markdown"] = true,
