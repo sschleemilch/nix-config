@@ -30,9 +30,17 @@
     zip
     p7zip
     unzip
+    gh
     python3
+    pipenv
+    poetry
     cargo
+    cmake
     rustc
+    libpcap
+    protobuf
+    graphviz
+    gcc
 
     # networking
     httpie # better curl
@@ -45,21 +53,11 @@
     socat
     ipcalc
 
-    iotop
-
-    # syscall monitoring
-    strace # syscalls
-    ltrace # library calls
-    lsof # list open files
-
     glow # markdown perviewer
 
-    lm_sensors
+    awscli2
+    kubectl
 
-    # buildings
-    gnumake
-    gcc
-
-    cyme # better lsusb
+    gnupg
   ];
 }

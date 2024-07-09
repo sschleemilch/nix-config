@@ -81,5 +81,13 @@
           ./hosts/desos/home.nix
         ];
       };
+      homeConfigurations."Q534774@LPTP2048124" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-darwin; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = { inherit inputs outputs; };
+        modules = [
+          catppuccin.homeManagerModules.catppuccin
+          ./hosts/LPTP2048124/home.nix
+        ];
+      };
     };
 }
