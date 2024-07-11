@@ -13,7 +13,7 @@
     ./zsh.nix
     ./htop.nix
     ./nvim
-    ./starship.nix
+    ./oh-my-posh
   ];
   home.packages = with pkgs; [
     comma # Install and run programs by sticking a , before them
@@ -29,7 +29,6 @@
     zip
     p7zip
     unzip
-
     python3
     cargo
     rustc
