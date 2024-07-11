@@ -29,11 +29,7 @@
           "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
           "trailing_diamond": "\ue0b4",
           "foreground": "p:black",
-          "background": "p:blue",
-          "properties": {
-            "style": "agnoster_short",
-            "max_depth": 3
-          }
+          "background": "p:blue"
         },
         {
           "type": "git",
@@ -106,15 +102,6 @@
           "foreground": "p:black",
           "background": "p:sapphire",
           "template": " \ue65e {{ .Full }} "
-        },
-        {
-          "type": "time",
-          "style": "diamond",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "foreground": "p:black",
-          "background": "p:white",
-          "template": "\uf017 {{ .CurrentDate | date \"15:04:05\" }}"
         },
         {
           "type": "text",
