@@ -3,7 +3,7 @@
     oh-my-posh
   ];
   home.file = {
-    face = {
+    omp_theme = {
       source = ./theme.json;
       target = ".config/oh-my-posh/theme.json";
     };
