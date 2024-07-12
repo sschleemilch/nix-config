@@ -59,6 +59,15 @@
           "foreground": "p:black",
           "background": "p:teal",
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
+        },
+        {
+          "type": "text",
+          "style": "diamond",
+          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "foreground": "p:black",
+          "background": "p:mauve",
+          "template": " {{ if .Env.DIRENV_DIR }}\ueaf6 {{ end }}"
         }
       ]
     },
