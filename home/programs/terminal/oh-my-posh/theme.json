@@ -132,6 +132,12 @@
           "template": "{{ if .Error }}\u00d7{{ .Code }}{{ end }}"
         },
         {
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:yellow",
+          "template": "$([ $(jobs | wc -l | xargs) -gt 0 ] && echo '<p:surface2,transparent>\u2500</>\uf0ad ')"
+        },
+        {
           "type": "status",
           "style": "plain",
           "foreground": "p:green",
