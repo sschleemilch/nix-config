@@ -12,30 +12,30 @@
           "type": "text",
           "style": "plain",
           "foreground": "p:surface2",
-          "template": "\u256d"
+          "template": "\u250c\u2500"
         },
         {
           "type": "session",
           "style": "diamond",
           "foreground": "p:black",
           "background": "p:yellow",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "\ue0ba",
+          "trailing_diamond": "\ue0bc",
           "template": " {{ if .SSHSession }}\ueba9 {{ .UserName }} {{ end }} "
         },
         {
           "type": "path",
           "style": "diamond",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "\ue0ba",
+          "trailing_diamond": "\ue0bc",
           "foreground": "p:black",
           "background": "p:blue"
         },
         {
           "type": "git",
           "style": "diamond",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "\ue0ba",
+          "trailing_diamond": "\ue0bc",
           "foreground": "p:black",
           "background": "p:green",
           "background_templates": [
@@ -54,69 +54,20 @@
         {
           "type": "project",
           "style": "diamond",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "\ue0ba",
+          "trailing_diamond": "\ue0bc",
           "foreground": "p:black",
           "background": "p:teal",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }}{{ end }} "
         },
-        {
-          "type": "text",
-          "style": "diamond",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "foreground": "p:black",
-          "background": "p:mauve",
-          "template": " {{ if .Env.DIRENV_DIR }}\ueaf6 {{ end }}"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "right",
-      "filler": "<p:surface2,transparent>\u2500</>",
-      "segments": [
         {
           "type": "python",
           "style": "diamond",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "foreground": "p:black",
-          "background": "p:yellow",
-          "template": "  {{ .Full }} "
-        },
-        {
-          "type": "rust",
-          "style": "diamond",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "foreground": "p:black",
-          "background": "p:maroon",
-          "template": "  {{ .Full }} "
-        },
-        {
-          "type": "node",
-          "style": "diamond",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "foreground": "p:black",
-          "background": "p:green",
-          "template": "  {{ .Full }} "
-        },
-        {
-          "type": "go",
-          "style": "diamond",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "foreground": "p:black",
-          "background": "p:sapphire",
-          "template": " \ue65e {{ .Full }} "
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:surface2",
-          "template": "\u2500\ueabc"
+          "leading_diamond": "\ue0ba",
+          "trailing_diamond": "\ue0bc",
+          "foreground": "black",
+          "background": "p:rosewater",
+          "template": "  {{ .Venv }} {{ .Full }}"
         }
       ]
     },
@@ -129,15 +80,15 @@
           "type": "text",
           "style": "plain",
           "foreground": "p:surface2",
-          "template": "\u2570"
+          "template": "\u2514"
         },
         {
           "type": "status",
           "style": "diamond",
           "foreground": "p:black",
           "background": "p:red",
-          "leading_diamond": "<p:surface2,transparent>\u2500</>\ue0b6",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "\ue0ba",
+          "trailing_diamond": "\ue0bc",
           "template": "{{ if .Error }}\u00d7{{ .Code }}{{ end }}"
         },
         {
@@ -168,7 +119,7 @@
   "secondary_prompt": {
     "foreground": "p:black",
     "background": "transparent",
-    "template": "<p:yellow,transparent>\ue0b6</><,p:yellow> > </><p:yellow,transparent>\ue0b0</> "
+    "template": "<p:yellow,transparent>\ue0ba</><,p:yellow> > </><p:yellow,transparent>\ue0b0</> "
   },
   "palette": {
     "black": "p:mantle",
