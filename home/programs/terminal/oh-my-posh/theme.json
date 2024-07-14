@@ -30,7 +30,9 @@
           "trailing_diamond": "\ue0bc",
           "foreground": "p:black",
           "background": "p:blue",
-          "template": "{{ $segment := .Segments.Git }}{{ $icon := \"\uf1d3\" }}{{ if $segment.Dir }} {{ $icon }} <i><b>{{ $segment.RepoName }}{{ if $segment.IsWorkTree}} \ue21c{{ end }}</b></i>{{if ne $segment.RepoName .Path}} \ueaf7{{ trimPrefix $segment.Dir .PWD }}{{ end }}{{ else }} \uea83 {{ path .Path .Location }}{{ end }}{{ if not .Writable }} \uf023{{ end }} "
+          "properties": {
+        },
+          "template": "{{ $segment := .Segments.Git }}{{ $icon := \"\uf1d3\" }}{{ if $segment.Dir }} {{ $icon }} <i><b>{{ $segment.RepoName }}{{ if $segment.IsWorkTree}} \ue21c{{ end }}</b></i>{{if ne $segment.RepoName .Path}} \ueaf7 {{ trimPrefix $segment.Dir .PWD }}{{ end }}{{ else }} \uea83 {{ path .Path .Location }}{{ end }}{{ if not .Writable }} \uf023{{ end }} "
         },
         {
           "type": "git",
@@ -69,7 +71,7 @@
           "trailing_diamond": "\ue0bc",
           "foreground": "black",
           "background": "p:rosewater",
-          "template": "  {{ .Venv }} {{ .Full }}"
+          "template": "  {{ .Venv }} {{ .Full }} "
         }
       ]
     },
