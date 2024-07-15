@@ -345,9 +345,9 @@ return {
 					header = vim.split(logo, "\n"),
                     -- stylua: ignore
                     center = {
-                        { action = require"fzf-lua".files, desc = " Find file", icon = " ", key = "f" },
-                        { action = require"fzf-lua".oldfiles, desc = " Recent files", icon = " ", key = "r" },
-                        { action = require"fzf-lua".live_grep, desc = " Find text", icon = " ", key = "g" },
+                        { action = require("telescope.builtin").find_files, desc = " Find file", icon = " ", key = "f" },
+                        { action = require("telescope.builtin").oldfiles, desc = " Recent files", icon = " ", key = "r" },
+                        { action = require("telescope.builtin").live_grep, desc = " Find text", icon = " ", key = "g" },
                         { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
                         { action = "Mason", desc = " Mason", icon = " ", key = "m" },
                         { action = "qa", desc = " Quit", icon = " ", key = "q" },
